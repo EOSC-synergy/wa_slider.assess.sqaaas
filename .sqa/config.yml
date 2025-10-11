@@ -1,0 +1,64 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: main
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/stevenjgibbons/wa_slider:
+      branch: main
+      repo: https://github.com/stevenjgibbons/wa_slider
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/stevenjgibbons/wa_slider git:
+        commands:
+        - /usr/bin/env sh .sqa/script.smelly-cobalt-capybara.sh
+        container: qc.acc_dorky-cinnamon-anteater
+  QC.Doc:
+    repos:
+      github.com/stevenjgibbons/wa_slider find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.ugly-bistre-rabbit.sh
+        container: qc.doc_silly-silver-fowl
+      github.com/stevenjgibbons/wa_slider git:
+        commands:
+        - /usr/bin/env sh .sqa/script.scummy-cyan-monster.sh
+        container: qc.doc_gummy-malachite-coral
+      github.com/stevenjgibbons/wa_slider markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.cheeky-goldenrod-toucan.sh
+        container: qc.doc_seedy-gold-numbat
+  QC.Lic:
+    repos:
+      github.com/stevenjgibbons/wa_slider licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.homey-charcoal-cuttlefish.sh
+        container: qc.lic_bluesy-sapphire-nightingale
+  QC.Sec:
+    repos:
+      github.com/stevenjgibbons/wa_slider bandit:
+        commands:
+        - /usr/bin/env sh .sqa/script.sleepy-rose-bee.sh
+        container: qc.sec_sloppy-khaki-paradise
+  QC.Sty:
+    repos:
+      github.com/stevenjgibbons/wa_slider flake8:
+        commands:
+        - /usr/bin/env sh .sqa/script.tacky-sepia-cougar.sh
+        container: qc.sty_lousy-magenta-gecko
+  QC.Uni:
+    repos:
+      github.com/stevenjgibbons/wa_slider pytest:
+        commands:
+        - /usr/bin/env sh .sqa/script.surly-silver-robin.sh
+        container: qc.uni_sickly-ivory-quail
+  QC.Ver:
+    repos:
+      github.com/stevenjgibbons/wa_slider get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.shaky-pear-sponge.sh
+        container: qc.ver_freaky-turquoise-guppy
+timeout: 5400
