@@ -15,50 +15,50 @@ sqa_criteria:
     repos:
       github.com/stevenjgibbons/wa_slider git:
         commands:
-        - /usr/bin/env sh .sqa/script.sleepy-platinum-bat.sh
-        container: qc.acc_hilly-ruby-havanese
+        - /usr/bin/env sh .sqa/script.smelly-russet-devil.sh
+        container: qc.acc_droopy-bistre-squid
   QC.Doc:
     repos:
       github.com/stevenjgibbons/wa_slider find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.wheezy-amber-anteater.sh
-        container: qc.doc_chummy-corn-sparrow
+        - /usr/bin/env sh .sqa/script.bluesy-olivine-foxhound.sh
+        container: qc.doc_slaphappy-gold-anteater
       github.com/stevenjgibbons/wa_slider git:
         commands:
-        - /usr/bin/env sh .sqa/script.greasy-lilac-snake.sh
-        container: qc.doc_grumpy-cobalt-bongo
+        - /usr/bin/env sh .sqa/script.homely-tan-starfish.sh
+        container: qc.doc_crappy-chartreuse-tamarin
       github.com/stevenjgibbons/wa_slider markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.woozy-salmon-eleuth.sh
-        container: qc.doc_smelly-yellow-deer
+        - /usr/bin/env sh .sqa/script.hilly-brass-deer.sh
+        container: qc.doc_muggy-puce-dormouse
   QC.Lic:
     repos:
       github.com/stevenjgibbons/wa_slider licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.shaky-celadon-toucan.sh
-        container: qc.lic_boozy-goldenrod-harrier
+        - /usr/bin/env sh .sqa/script.seedy-cinnabar-binturong.sh
+        container: qc.lic_sloppy-platinum-beaver
   QC.Sec:
     repos:
       github.com/stevenjgibbons/wa_slider bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.clammy-gamboge-greyhound.sh
-        container: qc.sec_gummy-flax-camel
+        - /usr/bin/env sh .sqa/script.sloppy-corn-squirrel.sh
+        container: qc.sec_stinky-viridian-gorilla
   QC.Sty:
     repos:
       github.com/stevenjgibbons/wa_slider flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.wheezy-salmon-dollar.sh
-        container: qc.sty_scaly-seashell-neanderthal
+        - /usr/bin/env sh .sqa/script.muggy-olivine-llama.sh
+        container: qc.sty_clammy-saffron-angora
   QC.Uni:
     repos:
       github.com/stevenjgibbons/wa_slider pytest:
         commands:
-        - /usr/bin/env sh .sqa/script.lanky-firebrick-yak.sh
-        container: qc.uni_homely-mauve-raccoon
+        - /usr/bin/env sh .sqa/script.squirrely-corn-starfish.sh
+        container: qc.uni_leaky-cornflower-ibis
   QC.Ver:
     repos:
       github.com/stevenjgibbons/wa_slider get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.crabby-orchid-eagle.sh
-        container: qc.ver_stealthy-aqua-hedgehog
+        - /usr/bin/env sh .sqa/script.wimpy-charcoal-lemming.sh
+        container: qc.ver_muggy-azure-yak
 timeout: 5400
